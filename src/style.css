@@ -24,6 +24,6 @@
 
 @layer components {
   .btn-primary {
-    @apply mobile:text-sm desktop:text-base bg-dark-green text-light-cream font-semibold rounded-lg p-3
+    @apply text-sm desktop:text-base bg-dark-green text-light-cream font-semibold rounded-lg p-3
   }
 }
