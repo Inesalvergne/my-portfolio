@@ -29,7 +29,8 @@ module.exports = {
       mona: 'Mona Sans',
       inter: 'Inter'
     },
-    extend: {},
+    extend: {
+    },
   },
   variants: {
   extend: {},
