@@ -26,4 +26,8 @@
   .btn-primary {
     @apply text-sm desktop:text-base bg-dark-green text-light-cream font-semibold rounded-lg p-3
   }
+
+  .btn-secondary{
+    @apply text-sm border-[1px] border-dark-green p-3 text-dark-green rounded-lg
+  }
 }
