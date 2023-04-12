@@ -12,7 +12,8 @@ module.exports = {
       'dark-green': '#009486',
       'light-green': '#D1E6E4',
       'light-cream': '#FFFCF7',
-      'dark': '#161717'
+      'dark': '#161717',
+      'light-grey': '#979797'
     },
     fontFamily: {
       mona: 'Mona Sans',

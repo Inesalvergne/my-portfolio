@@ -1,4 +1,6 @@
 const path = require('path');
+const HtmlWebpackPlugin = require('html-webpack-plugin');
+
 module.exports = {
   mode: 'production',
   entry: './src/index.js',
@@ -25,6 +27,25 @@ module.exports = {
       },
     ],
   },
+  plugins: [
+    new HtmlWebpackPlugin({
+      inject: 'body',
+      template: './src/index.html',
+      filename: 'index.html',
+      minify: {
+        removeComments: true,
+        collapseWhitespace: true
+      }
+    }),
+
+    new HtmlWebpackPlugin({
+      template: './src/web.html',
+      filename: 'web.html'
+    }),
+
+    // new UglifyJsPlugin(),
+
+    ],
   devServer: {
     static: 'dist',
     // watchContentBase: true,

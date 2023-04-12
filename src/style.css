@@ -3,12 +3,23 @@
 @tailwind utilities;
 
 @layer base {
+
   body {
     @apply text-dark font-inter
   }
+
   p {
-    @apply mobile:text-sm desktop:text-base mb-4
+    @apply text-sm desktop:text-base mb-4
   }
+
+  h3 {
+    @apply desktop:text-2xl font-semibold text-dark-green
+  }
+
+  h4 {
+    @apply text-xl font-medium
+  }
+
 }
 
 @layer components {
