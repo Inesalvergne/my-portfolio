@@ -5,10 +5,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Ines Alvergne</title>
 </head>
-<body class="bg-[radial-gradient(ellipse_at_left,_var(--tw-gradient-stops))] from-light-cream to-light-green">
+<body class="h-screen bg-[radial-gradient(ellipse_at_left,_var(--tw-gradient-stops))] from-light-cream to-light-green">
 
   <!-- NAVBAR -->
-	<nav class="relative pt-4 pb-20 border-b-[0.5px] border-b-dark-green border-spacing-x-12">
+	<nav class="relative pt-4 pb-20 desktop:border-b-[0.5px] border-b-dark-green border-spacing-x-12">
 
     <!-- HAMBURGER ON MOBILE -->
 		<div class="desktop:hidden">
@@ -21,7 +21,7 @@
 		</div>
 
     <!-- NAV LINKS ON DESKTOP -->
-		<ul class="hidden absolute pl-16 top-1/2 desktop:flex desktop:mx-auto desktop:items-center desktop:w-auto desktop:space-x-6">
+		<ul class="hidden absolute pl-[20%] top-1/2 desktop:flex text-center items-center space-x-6">
 			<li><a class="text-base text-dark-green hover:font-bold hover:border-b-2 hover:border-b-dark-green" href="#">ABOUT ME</a></li>
 			<li class="text-gray-300">
 				<svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -86,11 +86,11 @@
 			</div>
 		</nav>
 	</div>
-  <div class="m-8 desktop:flex justify-center items-center h-screen">
+  <div class="mobile:ml-[10%] desktop:pt-32 desktop:flex justify-center items-center desktop:space-x-28">
     <div class="basis-1/5">
       <img class="w-32 desktop:w-72 " src="profile_picture.png" alt="I'm presenting my final project at Demo Day">
     </div>
-    <div class="basis-2/5">
+    <div class="desktop:basis-2/5">
       <h1 class="text-2xl mt-5 desktop:text-5xl  mb-2 text-dark-green font-mona font-semilbold">Hi, I'm Ines.</h1>
       <h2 class="text-xl desktop:text-4xl font-mona  mb-5">Marketer & Web Developer.</h2>
       <div class="flex">
