@@ -1,6 +1,5 @@
 import './style.css';
-console.log("hi from the console!");
-
+console.log("hi from index.js");
 
 
 // Logic for mobile navbar
