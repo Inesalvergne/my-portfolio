@@ -34,7 +34,7 @@ module.exports = {
   plugins: [
     new HtmlWebpackPlugin({
       inject: 'body',
-      template: './src/index.html',
+      template: './src/pages/index.html',
       filename: 'index.html',
       minify: {
         removeComments: true,
@@ -43,8 +43,13 @@ module.exports = {
     }),
 
     new HtmlWebpackPlugin({
-      template: './src/web.html',
+      template: './src/pages/web.html',
       filename: 'web.html'
+    }),
+
+    new HtmlWebpackPlugin({
+      template: './src/pages/services.html',
+      filename: 'services.html'
     }),
 
     // new UglifyJsPlugin(),

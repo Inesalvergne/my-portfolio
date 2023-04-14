@@ -13,7 +13,7 @@
   }
 
   h3 {
-    @apply desktop:text-2xl font-semibold text-dark-green
+    @apply desktop:text-2xl font-mona font-semibold text-dark-green
   }
 
   h4 {
@@ -29,5 +29,9 @@
 
   .btn-secondary{
     @apply text-sm border-[1px] border-dark-green p-3 text-dark-green rounded-lg
+  }
+
+  .tag {
+    @apply text-xs bg-dark-green text-light-cream font-light rounded-lg py-2 px-4
   }
 }
