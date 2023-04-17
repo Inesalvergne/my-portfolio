@@ -57,6 +57,12 @@ module.exports = {
       filename: 'marketing.html'
     }),
 
+    new HtmlWebpackPlugin({
+      template: './src/pages/aboutme.html',
+      filename: 'aboutme.html'
+    }),
+
+
     // new UglifyJsPlugin(),
 
     ],

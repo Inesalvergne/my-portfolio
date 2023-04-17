@@ -5,7 +5,7 @@
 @layer base {
 
   body {
-    @apply text-dark font-inter
+    @apply text-dark font-inter bg-light-cream
   }
 
   p {
