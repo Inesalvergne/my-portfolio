@@ -52,6 +52,11 @@ module.exports = {
       filename: 'services.html'
     }),
 
+    new HtmlWebpackPlugin({
+      template: './src/pages/marketing.html',
+      filename: 'marketing.html'
+    }),
+
     // new UglifyJsPlugin(),
 
     ],
