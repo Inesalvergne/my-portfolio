@@ -1,16 +1,31 @@
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
+const MiniCssExtractPlugin = require('mini-css-extract-plugin');
+
+const pages = ["index", "aboutme", "services", "web", "marketing", "contact"]
 
 module.exports = {
-  mode: 'production',
-  entry: {
-    index: './src/index.js',
-    web: './src/web.js'
-  },
+  mode: 'development',
+  entry: pages.reduce((config, page) => {
+    config[page] = `./src/js/${page}.js`
+    return config;
+  }, {}),
   output: {
-    // path: path.resolve(__dirname, 'src'),
     filename: '[name].js',
-    path: __dirname + '/dist',
+    path: path.resolve(__dirname, 'dist'),
+    assetModuleFilename: 'assets/images/[name].[ext]'
+  },
+  optimization: {
+    splitChunks: {
+      cacheGroups: {
+        styles: {
+          name: 'styles',
+          test: /\.css$/,
+          chunks: 'all',
+          enforce: true,
+        }
+      },
+    },
   },
   module: {
     rules: [
@@ -27,51 +42,33 @@ module.exports = {
       {
         test: /\.css$/i,
         include: path.resolve(__dirname, 'src'),
-        use: ['style-loader', 'css-loader', 'postcss-loader'],
+        use: [MiniCssExtractPlugin.loader, 'css-loader', 'postcss-loader'],
+      },
+      {
+        test: /\.(png|svg|jpg|jpeg|gif)$/i,
+        type: 'asset/resource'
       },
     ],
   },
   plugins: [
-    new HtmlWebpackPlugin({
-      inject: 'body',
-      template: './src/pages/index.html',
-      filename: 'index.html',
-      minify: {
-        removeComments: true,
-        collapseWhitespace: true
-      }
+    new MiniCssExtractPlugin({
+      filename: 'src/style.css',
     }),
-
-    new HtmlWebpackPlugin({
-      template: './src/pages/web.html',
-      filename: 'web.html'
-    }),
-
-    new HtmlWebpackPlugin({
-      template: './src/pages/services.html',
-      filename: 'services.html'
-    }),
-
-    new HtmlWebpackPlugin({
-      template: './src/pages/marketing.html',
-      filename: 'marketing.html'
-    }),
-
-    new HtmlWebpackPlugin({
-      template: './src/pages/aboutme.html',
-      filename: 'aboutme.html'
-    }),
-
-
-    // new UglifyJsPlugin(),
-
-    ],
+  ].concat(
+    pages.map(
+      (page) =>
+        new HtmlWebpackPlugin({
+          inject: 'head',
+          template: `./src/pages/${page}.html`,
+          filename: `${page}.html`,
+          chunks: [page],
+        })
+    )
+  ),
   devServer: {
-    static: 'dist',
-    // watchContentBase: true,
-    static: path.resolve(__dirname, 'src'),
+    static: path.resolve(__dirname, 'dist'),
     port: 8080,
     open: true,
-    hot: true
+    hot: true,
   },
 };

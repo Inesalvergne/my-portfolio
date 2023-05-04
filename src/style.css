@@ -9,7 +9,7 @@
   }
 
   p {
-    @apply text-sm desktop:text-base mb-4
+    @apply text-xs desktop:text-base mb-4
   }
 
   h3 {
