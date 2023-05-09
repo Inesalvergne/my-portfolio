@@ -13,7 +13,10 @@ module.exports = {
   output: {
     filename: '[name].js',
     path: path.resolve(__dirname, 'dist'),
-    assetModuleFilename: 'assets/images/[name].[ext]'
+    // assetModuleFilename: 'images/[name].[ext]'
+    // assetModuleFilename: 'assets/images/[name].[ext]'
+    //  assetModuleFilename: 'assets/images/[hash][ext][query]'
+    clean: true
   },
   optimization: {
     splitChunks: {
@@ -46,7 +49,11 @@ module.exports = {
       },
       {
         test: /\.(png|svg|jpg|jpeg|gif)$/i,
-        type: 'asset/resource'
+        // include: path.resolve(__dirname, 'src/assets/images'),
+        type: 'asset/resource',
+        generator: {
+          filename: 'images/[name]-[hash][ext]'
+      }
       },
     ],
   },
@@ -58,7 +65,8 @@ module.exports = {
     pages.map(
       (page) =>
         new HtmlWebpackPlugin({
-          inject: 'head',
+          // inject: 'head',
+          inject: false,
           template: `./src/pages/${page}.html`,
           filename: `${page}.html`,
           chunks: [page],
