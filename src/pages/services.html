@@ -9,8 +9,8 @@
 </head>
 <body>
 
-   <!-- NAVBAR -->
-  <nav class="relative pt-4 pb-20 desktop:border-b-[0.5px] border-b-dark-green border-spacing-x-12">
+  <!-- NAVBAR -->
+  <nav class="relative pt-4 py-6 desktop:border-b-[0.5px] border-b-dark-green border-spacing-x-12">
 
     <!-- HAMBURGER ON MOBILE -->
     <div class="desktop:hidden ml-2">
@@ -23,33 +23,38 @@
     </div>
 
     <!-- NAV LINKS ON DESKTOP -->
-    <ul class="hidden absolute pl-[20%] top-1/2 desktop:flex text-center items-center space-x-6">
-      <li><a class="text-base text-dark-green hover:font-bold hover:border-b-2 hover:border-b-dark-green" href="aboutme.html">ABOUT ME</a></li>
-      <li class="text-gray-300">
-        <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <path d="M8 12C9.06087 12 10.0783 11.5786 10.8284 10.8284C11.5786 10.0783 12 9.06087 12 8C12 6.93913 11.5786 5.92172 10.8284 5.17157C10.0783 4.42143 9.06087 4 8 4C6.93913 4 5.92172 4.42143 5.17157 5.17157C4.42143 5.92172 4 6.93913 4 8C4 9.06087 4.42143 10.0783 5.17157 10.8284C5.92172 11.5786 6.93913 12 8 12Z" fill="#009486" fill-opacity="0.16"/>
+    <div class="flex justify-between items-center top-1/2">
+      <a href="index.html">
+        <img src="<%= require('../assets/images/logo_ia.png')%>" alt="" class="w-9 ml-[200px]">
+      </a>
+      <ul class="hidden absolute pl-[20%] desktop:flex text-center items-center space-x-6">
+        <li><a class="text-base text-dark-green hover:font-bold hover:border-b-2 hover:border-b-dark-green" href="aboutme.html">ABOUT ME</a></li>
+        <li class="text-gray-300">
+          <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M8 12C9.06087 12 10.0783 11.5786 10.8284 10.8284C11.5786 10.0783 12 9.06087 12 8C12 6.93913 11.5786 5.92172 10.8284 5.17157C10.0783 4.42143 9.06087 4 8 4C6.93913 4 5.92172 4.42143 5.17157 5.17157C4.42143 5.92172 4 6.93913 4 8C4 9.06087 4.42143 10.0783 5.17157 10.8284C5.92172 11.5786 6.93913 12 8 12Z" fill="#009486" fill-opacity="0.16"/>
+            </svg>
+        </li>
+        <li><a class="text-base text-dark-green hover:font-bold hover:border-b-2 hover:border-b-dark-green" href="services.html">MY SERVICES</a></li>
+        <li class="text-gray-300">
+          <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M8 12C9.06087 12 10.0783 11.5786 10.8284 10.8284C11.5786 10.0783 12 9.06087 12 8C12 6.93913 11.5786 5.92172 10.8284 5.17157C10.0783 4.42143 9.06087 4 8 4C6.93913 4 5.92172 4.42143 5.17157 5.17157C4.42143 5.92172 4 6.93913 4 8C4 9.06087 4.42143 10.0783 5.17157 10.8284C5.92172 11.5786 6.93913 12 8 12Z" fill="#009486" fill-opacity="0.16"/>
           </svg>
-      </li>
-      <li><a class="text-base text-dark-green hover:font-bold hover:border-b-2 hover:border-b-dark-green" href="services.html">MY SERVICES</a></li>
-      <li class="text-gray-300">
-        <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <path d="M8 12C9.06087 12 10.0783 11.5786 10.8284 10.8284C11.5786 10.0783 12 9.06087 12 8C12 6.93913 11.5786 5.92172 10.8284 5.17157C10.0783 4.42143 9.06087 4 8 4C6.93913 4 5.92172 4.42143 5.17157 5.17157C4.42143 5.92172 4 6.93913 4 8C4 9.06087 4.42143 10.0783 5.17157 10.8284C5.92172 11.5786 6.93913 12 8 12Z" fill="#009486" fill-opacity="0.16"/>
-        </svg>
-      </li>
-      <li><a class="text-base text-dark-green hover:font-bold hover:border-b-2 hover:border-b-dark-green" href="web.html">WEB DEVELOPMENT</a></li>
-      <li class="text-gray-300">
-        <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <path d="M8 12C9.06087 12 10.0783 11.5786 10.8284 10.8284C11.5786 10.0783 12 9.06087 12 8C12 6.93913 11.5786 5.92172 10.8284 5.17157C10.0783 4.42143 9.06087 4 8 4C6.93913 4 5.92172 4.42143 5.17157 5.17157C4.42143 5.92172 4 6.93913 4 8C4 9.06087 4.42143 10.0783 5.17157 10.8284C5.92172 11.5786 6.93913 12 8 12Z" fill="#009486" fill-opacity="0.16"/>
-        </svg>
-      </li>
-      <li><a class="text-base text-dark-green hover:font-bold hover:border-b-2 hover:border-b-dark-green" href="marketing.html">MARKETING</a></li>
-      <li class="text-gray-300">
-        <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <path d="M8 12C9.06087 12 10.0783 11.5786 10.8284 10.8284C11.5786 10.0783 12 9.06087 12 8C12 6.93913 11.5786 5.92172 10.8284 5.17157C10.0783 4.42143 9.06087 4 8 4C6.93913 4 5.92172 4.42143 5.17157 5.17157C4.42143 5.92172 4 6.93913 4 8C4 9.06087 4.42143 10.0783 5.17157 10.8284C5.92172 11.5786 6.93913 12 8 12Z" fill="#009486" fill-opacity="0.16"/>
+        </li>
+        <li><a class="text-base text-dark-green hover:font-bold hover:border-b-2 hover:border-b-dark-green" href="web.html">WEB DEVELOPMENT</a></li>
+        <li class="text-gray-300">
+          <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M8 12C9.06087 12 10.0783 11.5786 10.8284 10.8284C11.5786 10.0783 12 9.06087 12 8C12 6.93913 11.5786 5.92172 10.8284 5.17157C10.0783 4.42143 9.06087 4 8 4C6.93913 4 5.92172 4.42143 5.17157 5.17157C4.42143 5.92172 4 6.93913 4 8C4 9.06087 4.42143 10.0783 5.17157 10.8284C5.92172 11.5786 6.93913 12 8 12Z" fill="#009486" fill-opacity="0.16"/>
           </svg>
-      </li>
-      <li><a class="text-base text-dark-green hover:font-bold hover:border-b-2 hover:border-b-dark-green" href="contact.html">GET IN TOUCH</a></li>
-    </ul>
+        </li>
+        <li><a class="text-base text-dark-green hover:font-bold hover:border-b-2 hover:border-b-dark-green" href="marketing.html">MARKETING</a></li>
+        <li class="text-gray-300">
+          <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M8 12C9.06087 12 10.0783 11.5786 10.8284 10.8284C11.5786 10.0783 12 9.06087 12 8C12 6.93913 11.5786 5.92172 10.8284 5.17157C10.0783 4.42143 9.06087 4 8 4C6.93913 4 5.92172 4.42143 5.17157 5.17157C4.42143 5.92172 4 6.93913 4 8C4 9.06087 4.42143 10.0783 5.17157 10.8284C5.92172 11.5786 6.93913 12 8 12Z" fill="#009486" fill-opacity="0.16"/>
+            </svg>
+        </li>
+        <li><a class="text-base text-dark-green hover:font-bold hover:border-b-2 hover:border-b-dark-green" href="contact.html">GET IN TOUCH</a></li>
+      </ul>
+    </div>
   </nav>
 
   <!-- NAV LINKS ON MOBILE -->
