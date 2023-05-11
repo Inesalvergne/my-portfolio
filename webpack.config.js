@@ -48,7 +48,7 @@ module.exports = {
         use: [MiniCssExtractPlugin.loader, 'css-loader', 'postcss-loader'],
       },
       {
-        test: /\.(png|svg|jpg|jpeg|gif)$/i,
+        test: /\.(png|svg|jpg|jpeg|gif|ico)$/i,
         // include: path.resolve(__dirname, 'src/assets/images'),
         type: 'asset/resource',
         generator: {
