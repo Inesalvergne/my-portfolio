@@ -1,0 +1,6 @@
+# Redirects from what the browser requests to what we serve
+/aboutme.html /aboutme
+/contact.html /contact
+/marketing.html /marketing
+/services.html /services
+/web.html /web
