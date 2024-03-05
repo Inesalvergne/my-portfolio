@@ -14,8 +14,8 @@
 
   <body>
 
-   <!-- NAVBAR -->
-   <nav class="relative pt-4 py-6 desktop:border-b-[0.5px] border-b-dark-green border-spacing-x-12">
+  <!-- NAVBAR -->
+  <nav class="relative pt-4 py-6 desktop:border-b-[0.5px] border-b-dark-green border-spacing-x-12">
 
     <!-- HAMBURGER ON MOBILE -->
     <div class="desktop:hidden ml-2">
@@ -28,11 +28,13 @@
     </div>
 
     <!-- NAV LINKS ON DESKTOP -->
-    <div class="flex justify-between items-center top-1/2">
-      <a href="/" class="z-10">
-        <img src="<%= require('../assets/images/logo_ia.png')%>" alt="logo of ines alvergne" class="w-9 ml-[200px]">
-      </a>
-      <ul class="hidden absolute pl-[20%] desktop:flex text-center items-center space-x-6">
+    <div class="flex justify-center items-center py-5">
+      <ul class="hidden absolute desktop:flex text-center items-center space-x-6">
+        <li>
+          <a href="/">
+            <img src="<%= require('../assets/images/logo_ia.png')%>" alt="logo of ines alvergne" class="w-10">
+          </a>
+        </li>
         <li><a class="text-base text-dark-green hover:font-bold hover:border-b-2 hover:border-b-dark-green" href="/aboutme">ABOUT ME</a></li>
         <li class="text-gray-300">
           <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
